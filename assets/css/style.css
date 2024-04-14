@@ -4,9 +4,9 @@
 /* VARIABLES */
 :root {
     --c-dark: #212529;
-    --c-brand: #277d80;
+    --c-brand: #fc9918;
     --c-brand2: #cfcfcf;
-    --c-brand-light: #69dd90;
+    --c-brand-light: #ff3d2f;
     --c-brand-rgb: 0,0, 0;
     --c-body: #727272;
     --font-base: "ClashDisplay", sans-serif;
@@ -80,6 +80,11 @@ img {
     transform: scale(1.1);
 }
 
+.img-pro{
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
 
 /* NAVBAR */
 .navbar {
@@ -159,6 +164,14 @@ a:hover {
     background: linear-gradient(rgba(var(--c-brand-rgb), 0.507), rgba(var(--c-brand-rgb), 0.438)), url(../images/hero-1.jpg);
     background-position: center;
     background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+    #hero {
+        background: linear-gradient(rgba(var(--c-brand-rgb), 0.507), rgba(var(--c-brand-rgb), 0.438)), url(../images/hero-2.jpg);
+        background-position: center;
+        background-size: cover;
+    }
 }
 
 
