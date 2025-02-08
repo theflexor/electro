@@ -43,6 +43,26 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="Russian" />
     <meta name="revisit-after" content="4 days" />
+
+    <!-- Event snippet for Просмотр страницы conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16853251988/bHS2CMP0o5kaEJTvoOQ-',
+      'value': 1.0,
+      'currency': 'USD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
   </head>
 
   <body data-bs-spy="scroll" data-bs-target=".navbar">
@@ -82,9 +102,10 @@
               <a class="nav-link" href="#contact">Контакты</a>
             </li>
           </ul>
-          <a href="tel:+996(509)040-393" class="btn btn-brand ms-lg-3"
-            >+996(509)040-393</a
-          >
+         <a href="tel:+996(509)040-393" class="btn btn-brand ms-lg-3" 
+   onclick="gtag_report_conversion('tel:+996(509)040-393'); return false;">
+   +996(509)040-393
+</a>
         </div>
       </div>
     </nav>
@@ -129,6 +150,7 @@
                   padding: 2px 15px;
                   color: orange;
                 "
+                onclick="gtag_report_conversion('https://api.whatsapp.com/send?phone=996509040393'); return false;"
                 href="https://api.whatsapp.com/send?phone=996509040393"
                 ><i class="ri-whatsapp-fill" style="font-size: 25px"></i
                 >Whatsapp</a
