@@ -167,17 +167,7 @@ a:hover {
   background-size: cover;
 }
 
-@media screen and (max-width: 600px) {
-  #hero {
-    background: linear-gradient(
-        rgba(var(--c-brand-rgb), 0.507),
-        rgba(var(--c-brand-rgb), 0.438)
-      ),
-      url(../images/hero-2.webp);
-    background-position: center;
-    background-size: cover;
-  }
-}
+
 
 /* SECTION TITLE */
 .section-title {
