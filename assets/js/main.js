@@ -10,3 +10,22 @@ AOS.init({
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll("img[data-src]");
+    console.log('working');
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.removeAttribute("data-src");
+          observer.unobserve(img);
+        }
+      });
+    });
+  
+    lazyImages.forEach(img => observer.observe(img));
+  });
