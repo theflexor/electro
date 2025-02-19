@@ -14,8 +14,7 @@ AOS.init({
 
 document.addEventListener("DOMContentLoaded", function () {
     const lazyImages = document.querySelectorAll("img[data-src]");
-    console.log('working');
-    
+  
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
