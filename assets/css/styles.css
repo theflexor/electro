@@ -4,7 +4,7 @@
 /* VARIABLES */
 :root {
   --c-dark: #212529;
-  --c-brand: #fc9918;
+  --c-brand: #0a9b88;
   --c-brand2: #cfcfcf;
   --c-brand-light: #ff3d2f;
   --c-brand-rgb: 0, 0, 0;
@@ -262,7 +262,7 @@ a:hover {
   top: 50%;
 }
 .text-orange {
-  color: orange;
+  color: var(--c-brand);
 }
 /* REVIEW */
 .review small {
