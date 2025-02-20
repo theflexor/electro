@@ -158,7 +158,11 @@ a:hover {
 
 /* HERO */
 #hero {
-
+  background: linear-gradient(
+      rgba(var(--c-brand-rgb), 0.507),
+      rgba(var(--c-brand-rgb), 0.438)
+    ),
+    url(../images/hero-1.webp);
   background-position: center;
   background-size: cover;
   height: 90vh;
