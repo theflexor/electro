@@ -165,9 +165,20 @@ a:hover {
     url(../images/hero-1.webp);
   background-position: center;
   background-size: cover;
+  height: 90vh;
+  max-height: 1080px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
-
+@media screen and (max-width: 768px) {
+  #hero {
+    background-attachment: scroll;
+    height: 80vh;
+    max-height: 980px;
+  }
+}
 
 /* SECTION TITLE */
 .section-title {
